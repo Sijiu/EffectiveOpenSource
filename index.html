@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1024" />
+		<title>Effective Open Source &mdash; by Jake Wharton</title>
+		<link href="assets/impress.css" rel="stylesheet" />
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" title="roboto">
+	</head>
+	<body class="impress-not-supported">
+		<div class="fallback-message">
+			<p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+			<p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+		</div>
+
+		<div id="impress">
+			<div id="landing" class="step" data-x="0" data-y="0">
+				<h1>Effective Open Source</h1>
+				<h2>by Jake Wharton</h2>
+				<p><img src="assets/square.png"></p>
+			</div>
+
+			<div id="reciprocity" class="step" data-x="1000" data-y="0">
+				<p><img src="assets/images/03.jpg"></p>
+				<p><strong>Reciprocity</strong></p>
+				<p>Square would not exist without open source.</p>
+			</div>
+
+			<div id="recruiting" class="step" data-x="2000" data-y="0">
+				<p><img src="assets/images/04.jpg"></p>
+				<p><strong>Recruiting</strong></p>
+				<p>Being a contributor is potentially a great pathway to becoming an employee.</p>
+				<p>Having quality open source projects shows potential future employees that we care about more than just ourselves.</p>
+			</div>
+
+			<div id="better-world" class="step" data-x="3000" data-y="0">
+				<p><img src="assets/images/05.jpg"></p>
+				<p><strong>A better world</strong>
+				<p>By open sourcing our useful projects we can enable others to write better
+   software that we will eventually use.</p>
+			</div>
+
+			<div id="determine" class="step" data-x="4000" data-y="0">
+				<p><img src="assets/images/06.jpg"></p>
+				<p>Determine a useful grouping of code that has applications beyond its current implementation.</p>
+      <p>The code should be focused and perform one task perfectly. The best libraries are the ones that are small, modular, reusable, and have very small public APIs.</p>
+			</div>
+
+			<div id="abstract" class="step" data-x="0" data-y="1000">
+				<p><img src="assets/images/07.jpg"></p>
+				<p>Abstract and isolate the code into a package/module/library internally and update all existing consumers to interact only with its public API.</p>
+      	<p>Consider this soft-open sourcing. The project should be treated as an external third-party dependency.</p>
+			</div>
+
+			<div id="refine" class="step" data-x="1000" data-y="1000">
+				<p><img src="assets/images/08.jpg"></p>
+				<p>Scrutinize and peer-review all code for quality and style. Standardize all conventions and hide as much implementation detail as possible.</p>
+      	<p>If possible, enforce these things at a compile time level. Java has checkstyle, Ruby has cane, JS has linters, etc.</p>
+			</div>
+
+			<div id="example" class="step" data-x="2000" data-y="1000">
+				<p><img src="assets/images/09.jpg"></p>
+				<p>Add at least one working example. More are better. Documentation is oft ignored but example code is copy/pasted more than you would ever hope.</p>
+      	<p>Examples, like the library, should be focused on demonstrating one aspect of the library in a relatively real-world situation.</p>
+			</div>
+
+			<div id="api-docs" class="step" data-x="3000" data-y="1000">
+				<p><img src="assets/images/10.jpg"></p>
+				<p>All public APIs should be meticulously documented. No exceptions.</p>
+			</div>
+
+			<div id="impl-docs" class="step" data-x="4000" data-y="1000">
+				<p><img src="assets/images/11.jpg"></p>
+				<p>Implementation code should be documented to a degree to provide clarity for future contributors.</p>
+				<p>Omit documentation for obvious things.</p>
+			</div>
+
+			<div id="readme" class="step" data-x="0" data-y="2000">
+				<p><img src="assets/images/12.jpg"></p>
+				<p>Always have a <code>README.md</code> file which includes the project description, how to obtain the project, where documentation and examples can be found, and license information.</p>
+     		<p>When visiting GitHub, this is the first thing your users see (besides your root folder structure discussed previously) is this file. Make sure you format it using GitHub-flavored Markdown.</p>
+			</div>
+
+			<div id="clean-tree" class="step" data-x="1000" data-y="2000">
+				<p><img src="assets/images/13.jpg"></p>
+				<p>Ensure your source tree is clean, organized, and free of unnecessary files. IDE-specific configurations, generated sources, output directories, and binaries should all be omitted.</p>
+			</div>
+
+			<div id="website" class="step" data-x="2000" data-y="2000">
+				<p><img src="assets/images/14.jpg"></p>
+				<p>Deploy your website to the <code>gh-pages</code> branch of GitHub with a "Fork" ribbon linking to the code. This will provide free hosting for your site with a url like http://square.github.com/project/.</p>
+      </div>
+
+			<div id="contributing" class="step" data-x="3000" data-y="2000">
+				<p><img src="assets/images/15.jpg"></p>
+				<p>Add a <code>CONTRIBUTING.md</code> file which details how to properly submit code for inclusion. Square requires all contributors sign a simple licensing agreement before we will accept their code.</p>
+			</div>
+
+			<div id="travis" class="step" data-x="4000" data-y="2000">
+				<p><img src="assets/images/16.jpg"></p>
+				<p>Configure Travis CI to automatically build your branches and incoming pull requests. With a CI ensuring compilation, code style, and all tests pass the code is already one step closer to being integrated.</p>
+			</div>
+
+			<div id="blog" class="step" data-x="0" data-y="3000">
+				<p><img src="assets/images/17.jpg"></p>
+				<p>Write a blog post on the Corner announcing the project, the motivations behind it, how it solves a problem, and where to obtain examples, code, and documentation.</p>
+			</div>
+
+			<div id="break-things" class="step" data-x="1000" data-y="3000">
+				<p><img src="assets/images/18.jpg"></p>
+				<p>Move fast and break things&mdash;just not our things!</p>
+   			<p>As more people begin contributing and using your project its scope may expand or deviate from your original vision. If the project is being used internally you must strike a balance between always staying on the latest version and ensuring that our consumers remain functional.</p>
+   			<p>When in doubt, create an internal, stable fork to allow revision on the project. You should <strong>NOT</strong> stand in the way of the project's evolution.</p>
+			</div>
+
+			<div id="doc-sync" class="step" data-x="2000" data-y="3000">
+				<p><img src="assets/images/19.jpg"></p>
+				<p>Ensure documentation, examples, and code always remain in sync.</p>
+   			<p>External contributions will likely only update one or two of these, not all. New users will always be looking at all three for guidance so it is essential they remain valid.</p>
+			</div>
+
+			<div id="abandon" class="step" data-x="3000" data-y="3000">
+				<p><img src="assets/images/20.jpg"></p>
+				<p>Do not be afraid to abandon a project.</p>
+   			<p>We write to raise the bar and often oust existing open source projects. If someone writes a project that is measurably superior than yours you should make it known. Place deprecation notices in the readme, website, and GitHub description with links to the better implementation.</p>
+			</div>
+
+			<div id="all-the-things" class="step" data-x="4000" data-y="3000">
+				<p><img src="assets/images/21.jpg"></p>
+			</div>
+
+			<div id="overview" class="step" data-x="2000" data-y="1500" data-scale="6"></div>
+		</div>
+
+		<script src="assets/impress.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script>
+			impress().init();
+		</script>
+	</body>
+</html>
