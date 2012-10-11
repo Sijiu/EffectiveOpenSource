@@ -20,84 +20,78 @@ What we will cover
 Why do we open source?
 ----------------------
 
- * Reciprocity
+ *  __Reciprocity__
 
-   Square would not exist without open source.
+    Square would not exist without open source.
 
- * Recruiting
+ *  __Recruiting__
 
-   Being a contributor is potentially a great pathway to becoming an employee.
+    Being a contributor is potentially a great pathway to becoming an employee.
 
-   Having quality open source projects shows potential future employees that we
-   care about more than just ourselves.
+    Having quality open source projects shows potential future employees that we
+    care about more than just ourselves.
 
- * A better world
+ *  __A better world__
 
-   By open sourcing our useful projects we can enable others to write better
-   software that we will eventually use.
+    By open sourcing our useful projects we can enable others to write better
+    software that we will eventually use.
 
 
 
 How we open source
 ------------------
 
- * Code
+ * __Code__
+   1.  Determine a useful grouping of code that has applications beyond its
+       current implementation.
 
-   1. Determine a useful grouping of code that has applications beyond its
-      current implementation.
+       The code should be focused and perform one task perfectly. The best
+       libraries are the ones that are small, modular, reusable, and have very
+       small public APIs.
+   2.  Abstract and isolate the code into a package/module/library internally
+       and update all existing consumers to interact only with its public API.
 
-      The code should be focused and perform one task perfectly. The best
-      libraries are the ones that are small, modular, reusable, and have very
-      small public APIs.
+       Consider this soft-open sourcing. The project should be treated as an
+       external third-party dependency.
+   3.  Scrutinize and peer-review all code for quality and style. Standardize
+       all conventions and hide as much implementation detail as possible.
 
-   2. Abstract and isolate the code into a package/module/library internally
-      and update all existing consumers to interact only with its public API.
+       If possible, enforce these things at a compile time level. Java has
+       checkstyle, Ruby has cane, JS has linters, etc.
+   4.  Add at least one working example. More are better. Documentation is oft
+       ignored but example code is copy/pasted more than you would ever hope.
 
-      Consider this soft-open sourcing. The project should be treated as an
-      external third-party dependency.
-
-   3. Scrutinize and peer-review all code for quality and style. Standardize
-      all conventions and hide as much implementation detail as possible.
-
-      If possible, enforce these things at a compile time level. Java has
-      checkstyle, Ruby has cane, JS has linters, etc.
-
-   4. Add at least one working example. More are better. Documentation is oft
-      ignored but example code is copy/pasted more than you would ever hope.
-
-      Examples, like the library, should be focused on demonstrating one aspect
-      of the library in a relatively real-world situation.
+       Examples, like the library, should be focused on demonstrating one aspect
+       of the library in a relatively real-world situation.
 
 
- * Documentation
+ *  __Documentation__
 
-   * All public APIs should be meticulously documented. No exceptions.
+    *  All public APIs should be meticulously documented. No exceptions.
+    *  Implementation code should be documented to a degree to provide clarity
+       for future contributors. Omit documentation for obvious things.
 
-   * Implementation code should be documented to a degree to provide clarity
-     for future contributors. Omit documentation for obvious things.
+       _e.g.,_
+       ```java
+       /**
+        * Gets the user's first name.
+        *
+        * @param user The user.
+        * @return User's first name.
+        */
+       public String getFirstName(User user) {
+         return user.firstName;
+       }
+       ```
+    *  Always have a `README.md` file which includes the project description,
+       how to obtain the project, where documentation and examples can be found,
+       and license information.
 
-     e.g.,
+       When visiting GitHub, this is the first thing your users see (besides your
+       root folder structure discussed previously) is this file. Make sure you
+       format it using GitHub-flavored Markdown.
 
-          /**
-           * Gets the user's first name.
-           *
-           * @param user The user.
-           * @return User's first name.
-           */
-          public String getFirstName(User user) {
-            return user.firstName;
-          }
-
-   * Always have a `README.md` file which includes the project description,
-     how to obtain the project, where documentation and examples can be found,
-     and license information.
-
-     When visiting GitHub, this is the first thing your users see (besides your
-     root folder structure discussed previously) is this file. Make sure you
-     format it using GitHub-flavored Markdown.
-
-
- * Repository
+ * __Repository__
 
     * Ensure your source tree is clean, organized, and free of unnecessary
       files. IDE-specific configurations, generated sources, output
@@ -124,7 +118,7 @@ How we open source
 Open source upkeep
 ------------------
 
- * Move fast and break things--just not our things!
+ * Move fast and break things—just not our things!
 
    As more people begin contributing and using your project its scope may
    expand or deviate from your original vision. If the project is being used
@@ -147,3 +141,6 @@ Open source upkeep
    make it known. Place deprecation notices in the readme, website, and GitHub
    description with links to the better implementation.
 
+
+
+![](assets/square.png)
