@@ -3,6 +3,8 @@ Effective Open Source
 
 by Jake Wharton
 
+![](http://raw.github.com/JakeWharton/EffectiveOpenSource/gh-pages/assets/square.png)
+
 
 
 What we will cover
@@ -140,7 +142,3 @@ Open source upkeep
    someone writes a project that is measurably superior than yours you should
    make it known. Place deprecation notices in the readme, website, and GitHub
    description with links to the better implementation.
-
-
-
-![](assets/square.png)
