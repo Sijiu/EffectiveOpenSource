@@ -3,7 +3,7 @@ Effective Open Source
 
 by Jake Wharton
 
-![](http://raw.github.com/JakeWharton/EffectiveOpenSource/gh-pages/assets/square.png)
+![](https://raw.github.com/JakeWharton/EffectiveOpenSource/gh-pages/assets/square.png)
 
 
 
